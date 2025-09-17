@@ -1,5 +1,5 @@
 const express = require("express");
-const router = express.Router();
+const taskRouter = express.Router();
 
 const {
   getAllTasks,
@@ -9,7 +9,7 @@ const {
   deleteTask,
 } = require("../dl/tasks");
 
-router.route("/").get(getAllTasks).post(createTask);
-router.route("/:id").get(getTask).patch(updateTask).delete(deleteTask);
+taskRouter.route("/").get(getAllTasks).post(createTask);
+taskRouter.route("/:id").get(getTask).patch(updateTask).delete(deleteTask);
 
-module.exports = { router };
+module.exports = { taskRouter };
