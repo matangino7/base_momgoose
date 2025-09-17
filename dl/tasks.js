@@ -1,4 +1,4 @@
-const Task = require("../schemas/tasksSchema"); // Make sure this path is correct
+const Task = require("../schemas/tasksSchema");
 
 const getAllTasks = async (req, res) => {
   try {
